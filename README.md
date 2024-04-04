@@ -45,10 +45,10 @@ In my solution, I utilized the main thread as a timer, which increases a counter
 Whenever the counter increases, it also sets a flag to false, which allows a thread to scan for the temperature.
 Once a thread scans the temeprature, it resets the flag to true, disallowing other threads from scanning until the next minute occurs.
 Each thread continuously checks if it is allowed to scan the temperature, and they all stop once the timer goes above 60 minutes.
-I utilize various mutexes to ensure only one thread is allowed to write to a variable at a time.
-I also used a shared lock, which allows multiple threads to read from a variable at the same time.
-In my program, I use a vector for shared memory, and it is protected with a mutex to prevent data corruption if more than one thread writes to it.
-My program outputs a timer, the generated temperature scanned during that time, as well as the compiled report.
+I utilized various mutexes to ensure only one thread is allowed to write to a counter at a time.
+I also used a shared lock, which allows multiple threads to read from a timer variable at the same time.
+A vector also acts as the shared data memory and it is protected with a mutex to prevent data corruption if more than one thread writes to it.
+My program outputs a timer, the temps scanned during that time, as well as the compiled report.
 
 ## Compile Instructions1
 These instructions assume you have a UCF account. To compile without one, check out the third section.
