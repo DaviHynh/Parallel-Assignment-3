@@ -49,6 +49,9 @@ I utilized various mutexes to ensure only one thread is allowed to write to a co
 I also used a shared lock, which allows multiple threads to read from a timer variable at the same time.
 A vector also acts as the shared data memory and it is protected with a mutex to prevent data corruption if more than one thread writes to it.
 My program outputs a timer, the temps scanned during that time, as well as the compiled report.
+I ensured the validity of my program by running it multiple times and verifying that the output at the end matched the printed temperature readings.
+My solution is efficient, since it distributes work/scans evenly among the threads.
+Progress is also guaranteed and deadlocks are avoided, since a thread attempting to aquire a lock or scan the temperature will eventually succeed.
 
 ## Compile Instructions1
 These instructions assume you have a UCF account. To compile without one, check out the third section.
