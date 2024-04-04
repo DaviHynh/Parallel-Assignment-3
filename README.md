@@ -2,7 +2,7 @@
 
 ### [Documentation](#Program-Documentation)
 
-### [Compile Instructions](#Compile-Instructions)
+### [Compile Instructions](#Compile-Instructions1)
 Note: I recommend using Eustis3 for testing since it's the same environment I tested on.
 - #### [Windows on Eustis3](#Compiling-for-Windows-on-Eustis3)
 - #### [Mac/Linux on Eustis3](#Compiling-for-Linux-or-Mac-on-Eustis3)
@@ -50,7 +50,7 @@ I also used a shared lock, which allows multiple threads to read from a variable
 In my program, I use a vector for shared memory, and it is protected with a mutex to prevent data corruption if more than one thread writes to it.
 My program outputs a timer, the generated temperature scanned during that time, as well as the compiled report.
 
-## Compile Instructions
+## Compile Instructions1
 These instructions assume you have a UCF account. To compile without one, check out the third section.
 
 1. If you're not on the campus WiFi, set up the UCF VPN.
